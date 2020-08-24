@@ -6,7 +6,9 @@
     @media screen and (max-width: 768px) 
         max-width: 576px
     @media screen and (max-width: 576px) 
-        max-width: 300px
+        max-width: 450px
+    @media screen and (max-width: 450px) 
+        max-width: 350px
 
 // Header =========================================>     
 
@@ -15,6 +17,14 @@
         display: none
     .header__nav
         margin-bottom: 100px 
+    .story
+        .container
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            text-align: center
+        &__info
+            padding: 20px 0 0 0 
 @media screen and (max-width: 576px) 
     .header__menu
         display: none

@@ -27,12 +27,12 @@ body
 .offset
     padding: 70px 0
 
-@mixin pseudo($bottom, $color)
+@mixin pseudo($height, $bottom, $color)
     &::after
         content: ''
         display: block
         width: 50px 
-        height: 1px
+        height: $height
         background-color: $color
         position: absolute
         left: 50%
@@ -40,8 +40,7 @@ body
         bottom: $bottom
 
 .btn
-    width: 125px 
-    height: 40px
+    padding: 10px 15px
     font-family: 'Hammersmith One'
     font-size: 16px
     text-transform: uppercase
@@ -49,6 +48,34 @@ body
     border: 1px solid #00e0d0
     border-radius: 2px
     color: #00e0d0
+    &:hover
+        background-color: #272727
+        color: white
+        border: 1px solid black
+        transition: all .3s ease-in-out
+ 
+.info-header
+    margin: 0 auto
+    letter-spacing: 0.1rem
+    &__title
+        font-size: 22px
+        font-weight: bold
+        margin-bottom: 15px
+        text-transform: uppercase
+        color: #413d4b
+        font-family: 'Playfair Display'
+        &_light
+            color: #fff
+    &__text
+        font-size: 14px
+        margin-bottom: 70px
+        color: #636268
+        position: relative
+        font-family: 'Playfair Display'
+        @include pseudo(2px, -25px, #c6c4c9)
+        &_light
+            color: #fff
+    
     
 // Header =========================================>
 
@@ -79,26 +106,27 @@ body
         &_active
             color: #00e0d0 
     &__intro
-        max-width: 90%
+        max-width: 80%
     &__title
         font-size: 32px 
         font-family: 'Playfair Display'
         font-weight: 900
         position: relative
-        @include pseudo(-80%, #00e0d0)
+        @include pseudo(1px, -80%, #00e0d0)
         @media screen and (max-width: 768px) 
-            @include pseudo(-40%, #00e0d0)
-        @media screen and (max-width: 576px) 
-            @include pseudo(-30%, #00e0d0)
+            @include pseudo(1px, -40%, #00e0d0)
+        @media screen and (max-width: 328px) 
+            @include pseudo(1px, -20%, #00e0d0)
     &__text
         margin: 50px 0 
         line-height: 24px
     &__btn
         margin-bottom: 125px
-        &:hover
-            background-color: #272727
-            color: white
-            border: 1px solid black
+        padding: 10px 15px
+        display: inline-block
+        cursor: pointer
+        a 
+            color: #00e0d0
     &__dot-panel
         margin-bottom: 70px
     &__dot
@@ -109,6 +137,7 @@ body
         background-color: transparent
         border: 1px solid #fff
         border-radius: 50%
+        cursor: pointer
         &_active
             background-color: #00e0d0
             border: 1px solid #00e0d0
@@ -138,7 +167,6 @@ body
     &::after
         bottom: 0
     &_active
-        transform: translateX(-90px)
         transition: all 0.7s ease
     &_active &__icon
         display: none    
@@ -153,9 +181,9 @@ body
         position: fixed
         right: -100%
         top: 0
-        width: 50%
+        width: 100%
         height: 100% 
-        background: linear-gradient(to right, #2b2648, #44346d)
+        background: transparent
         padding: 70px 10 px 20px 10px
         transition: all 0.5s ease
         z-index: 2
@@ -178,10 +206,139 @@ body
         height: 100%;
         z-index: 1;
         background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(3px)
+        backdrop-filter: blur(5px)
         &_active
             display: block;
 
 // Story =========================================>
 
+.story
+    .container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        text-align: start
+    &__image
+        img
+            animation: story 1s ease 3s 3 alternate-reverse forwards
+    &__info
+        padding: 0 0 0 100px 
+        line-height: 22px
+    &__title
+        font-size: 22px
+        font-family: 'Playfair Display'
+        font-weight: bold
+        text-transform: uppercase
+        color: #413d4b
+    &__text
+        margin: 25px 0
+        
+
+@keyframes story
+    0%
+        transform: scale(-1, 1)
+    100%
+        transform: scale(1, 1)
+
+// Video =========================================>
+
+.video
+    height: 550px
+    background: url("/images/bgr/video.jpg") 0 0 / cover no-repeat
+    max-width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    &__play
+        width: 100px
+        height: 100px
+        border: 2px solid white
+        border-radius: 50%
+        img
+            position: relative
+            left: 3px
+            top: 25px
+    p
+        font-size: 16px
+        font-weight: 900
+        margin-top: 34px
+
+// Skills =========================================>
+
+.skills
+    &__item-panel
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        flex-wrap: wrap
+    &__item
+        flex: 1 1 33.33%
+        padding: 40px 35px
+        &:not(:nth-child(3n))
+            border-right: 1px solid #ebebeb
+        &:nth-child(-n+3)
+            border-bottom: 1px solid #ebebeb         
+    &__icon
+        height: 50px
+    &__title
+        font-weight: 900
+        text-transform: uppercase
+        color: #000
+        margin: 35px 0 25px 0
+    &__text
+        line-height: 22px
+
+// Team =========================================>
+
+.team
+    background: url("/images/bgr/team.jpg") 0 0 / cover no-repeat
+    .info-header
+        &__text
+            @include pseudo(2px, -25px, #655c80)
+    &__item-panel
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__item
+        flex: 0 0 23.5%
+        text-transform: uppercase
+    &__image
+        height: 230px
+        background-color: #fff
+    &__item-info
+        border: 1px solid #7b7890
+        padding: 20px 0
+    &__name
+        font-weight: 900
+        letter-spacing: 0.05rem
+        margin-bottom: 10px
+    &__majority
+        color: #b1afbe
+        font-size: 13px
+    p
+        margin: 70px 0 30px 0
+        letter-spacing: 0.05rem
+
+// Works =========================================>
     
+.works
+    .container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: baseline
+    &__more
+        color: #413d4b
+    &__item-panel
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        margin: 70px 0
+    &__item
+        border: 1px solid black
+        height: 200px
+        flex: 0 0 16.666%
+    button
+        display: block
+        padding: 10px 25px
+        margin: 0 auto

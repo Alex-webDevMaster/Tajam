@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
         window.addEventListener("click", (e) => {
-            if (e.target === overlay && burger.classList.contains("burger_active")) {
+            if (e.target === menu && burger.classList.contains("burger_active")) {
                 toggler();
             }
         });
@@ -36,7 +36,6 @@ let intros = {
     yellow: 'linear-gradient(to right, #000, #f7e600)',
     red: 'linear-gradient(to right, #000, #ff0000)'
 }
-// ;
 
 let sliderInterval = setInterval(styleChanger, 5000);
 

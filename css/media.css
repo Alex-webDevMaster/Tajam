@@ -12,7 +12,13 @@
 
 @media screen and (max-width: 576px) {
   .container {
-    max-width: 300px;
+    max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 350px;
   }
 }
 
@@ -22,6 +28,22 @@
   }
   .header__nav {
     margin-bottom: 100px;
+  }
+  .story .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: center;
+  }
+  .story__info {
+    padding: 20px 0 0 0;
   }
 }
 
