@@ -53,7 +53,18 @@ body
         color: white
         border: 1px solid black
         transition: all .3s ease-in-out
- 
+        box-shadow: 0px 0px 15px 5px #797979
+        animation:  glowing infinite linear 2s alternate
+
+
+@keyframes glowing 
+  0% 
+    box-shadow: 0px 0px 20px 5px #797979
+  50% 
+    box-shadow: 0px 0px 50px 5px #797979  
+  100%
+    box-shadow: 0px 0px 80px 5px #797979
+
 .info-header
     margin: 0 auto
     letter-spacing: 0.1rem
@@ -103,8 +114,23 @@ body
         font-weight: 900
         text-transform: uppercase
         color: #fff
-        &_active
+        position: relative
+        transition: all 0.3s ease-in-out
+        &::after
+            content: ''
+            display: block
+            width: 0%
+            height: 2px
+            background-color: #00e0d0
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            bottom: -15px
+            transition: all 0.3s ease-in-out
+        &:hover
             color: #00e0d0 
+            &::after
+                width: 100%
     &__intro
         max-width: 80%
     &__title
@@ -254,10 +280,15 @@ body
         height: 100px
         border: 2px solid white
         border-radius: 50%
+        cursor: pointer
+        &:hover
+            background-color: #000
+            filter: drop-shadow(0px 0px 5px #ffffff)
         img
             position: relative
             left: 3px
             top: 25px
+            
     p
         font-size: 16px
         font-weight: 900
@@ -329,16 +360,225 @@ body
         align-items: baseline
     &__more
         color: #413d4b
+        position: relative
+        cursor: pointer
+        &::after
+            content: '>'
+            display: inline-block
+            position: absolute
+            right: -15px
+            transition: all 0.3s ease-in-out
+        &:hover
+            &::after
+                right: -25px
     &__item-panel
         display: flex
         flex-direction: row
         flex-wrap: wrap
         margin: 70px 0
     &__item
-        border: 1px solid black
         height: 200px
         flex: 0 0 16.666%
     button
         display: block
         padding: 10px 25px
         margin: 0 auto
+
+// Comments =========================================>
+
+.comments
+    background: url("/images/bgr/feedback.jpg") 0 0 / cover no-repeat
+    height: 500px
+    &__slider
+        position: relative
+    &__slider-name
+        margin-top: 55px
+        color: #ffffff
+        font-weight: 900
+        margin-bottom: 7px
+        text-transform: uppercase
+    &__slider-majority
+        color: #c0bcc9
+        text-transform: uppercase
+        font-size: 13px
+    &__slider-wrapper
+    &__slider-inner
+        margin: 40px 0 50px 0
+    &__slider-item
+        font-size: 16px
+        font-family: 'Playfair Display'
+        line-height: 26px
+        color: #ffffff
+        font-weight: 400
+    &__responder-panel
+        padding-bottom: 15px
+        margin: 0 auto
+        max-width: 400px
+        display: flex
+        flex-direction: row
+        justify-content: space-around
+        align-items: center
+    &__responder_active
+        filter: drop-shadow(0px 0px 10px #fff);
+    &__responder-info
+        margin-bottom: 60px
+        text-transform: uppercase
+    &__prev, &__next
+        width: 15px 
+        height: 15px
+        border-top: 2px solid #9f9f9f
+        border-left: 2px solid #9f9f9f
+        transform: rotate(-45deg)
+    &__next
+        transform: rotate(135deg)
+
+// Form =========================================>
+
+.contact
+    .container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    &__form
+        flex: 47%
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        .info-header__title
+            text-align: start
+            margin-bottom: 35px
+    input, textarea
+        &:focus
+            &::placeholder
+                opacity: 0
+        &::placeholder
+            color: #a09ea5
+    input
+        width: 100%
+        padding: 13px 20px
+        border: 1px solid #e5e5e5
+        margin-bottom: 20px
+    textarea
+        resize: none
+        border: 1px solid #e5e5e5
+        margin-bottom: 20px
+        padding: 17px 20px
+    button
+        padding: 10px 30px
+    &__clients
+        flex: 50%
+        padding-left: 100px
+        .info-header__title
+            text-align: start
+            margin-bottom: 50px
+    &__client-panel  
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        align-items: center
+    &__client
+        flex: 0 0 40%
+        margin-bottom: 50px
+        &:hover
+            filter: drop-shadow(0px 0px 10px #646464)
+
+// Footer =========================================>
+        
+.footer
+    background: url("/images/bgr/footer.jpg") 0 0 / cover no-repeat
+    &__main
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        text-align: start
+    &-info
+        flex: 0 0 30%
+        &__logo
+            position: relative
+            bottom: 15px
+        &__logotype
+            font-size: 30px
+            font-weight: 100
+            color: #00e0d0
+            position: relative
+            left: 10px
+            top: 5px
+        &__text
+            line-height: 26px
+    &-studio
+        flex: 0 0 25%
+        position: relative
+        &__title
+            font-size: 15px
+            text-transform: uppercase
+            font-weight: 900
+            margin-bottom: 30px
+            position: relative
+            left: -30px
+        &__text
+            margin-bottom: 20px
+            line-height: 26px
+        &__phone
+            color: #fff
+        &__icon
+            position: absolute
+            left: -30px
+    &-touch
+        flex: 0 0 30%
+        &__title
+            font-size: 15px
+            text-transform: uppercase
+            font-weight: 900
+            margin-bottom: 30px
+        &__input
+            padding: 14px
+            width: 70%
+            border: 1px solid #9e98b0
+            background-color: transparent
+            margin-right: 7px
+            &:focus
+                color: #fff
+                &::placeholder
+                    opacity: 0
+            &::placeholder
+                color: #a09ea5
+        &__btn
+            width: 70px
+            height: 45px
+            background-color: #948da7
+            opacity: .9   
+            position: relative
+            top: -5px
+            &:hover
+                filter: brightness(150%)  
+        &__social-panel
+            margin-top: 25px
+            max-width: 235px
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+        &__social
+            border: 1px solid #ffffff
+            border-radius: 50%
+            width: 35px
+            height: 35px
+            display: flex
+            justify-content: center
+            align-items: center
+            cursor: pointer
+            &:hover
+                background-color: #130d33
+                border: 1px solid #130d33
+                box-shadow: 0px 0px 5px 3px #130d33
+    &__copyright
+        margin-top: 70px
+        width: 100%
+        display: flex
+        flex-direction: row
+        align-items: baseline
+        justify-content: space-between
+        a
+            margin-right: 35px
+            color: #fff
+            text-transform: uppercase

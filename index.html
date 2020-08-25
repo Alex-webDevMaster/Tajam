@@ -18,13 +18,13 @@
                     <span class="header__logotype">tajam</span>
                 </div>
                 <div class="header__menu">
-                    <a href="#" class="header__link header__link_active">Home</a>
-                    <a href="#" class="header__link">About</a>
-                    <a href="#" class="header__link">Expertise</a>
-                    <a href="#" class="header__link">Teams</a>
-                    <a href="#" class="header__link">Works</a>
-                    <a href="#" class="header__link">People say</a>
-                    <a href="#" class="header__link">Contact</a>
+                    <a href="#" class="header__link">Home</a>
+                    <a href="#about" class="header__link">About</a>
+                    <a href="#expertise" class="header__link">Expertise</a>
+                    <a href="#teams" class="header__link">Teams</a>
+                    <a href="#works" class="header__link">Works</a>
+                    <a href="#peopleSay" class="header__link">People say</a>
+                    <a href="#contact" class="header__link">Contact</a>
                 </div>
                 <div class="burger">
                     <span class="burger__icon"></span>
@@ -32,12 +32,12 @@
                 <div class="burger__menu">
                     <ul class="burger__list">
                         <li><a href="#" class="burger__link">Home</a></li>
-                        <li><a href="#" class="burger__link">About</a></li>
-                        <li><a href="#" class="burger__link">Expertise</a></li>
-                        <li><a href="#" class="burger__link">Teams</a></li>
-                        <li><a href="#" class="burger__link">Works</a></li>
-                        <li><a href="#" class="burger__link">People say</a></li>
-                        <li><a href="#" class="burger__link">Contact</a></li>
+                        <li><a href="#about" class="burger__link">About</a></li>
+                        <li><a href="#expertise" class="burger__link">Expertise</a></li>
+                        <li><a href="#teams" class="burger__link">Teams</a></li>
+                        <li><a href="#works" class="burger__link">Works</a></li>
+                        <li><a href="#peopleSay" class="burger__link">People say</a></li>
+                        <li><a href="#contact" class="burger__link">Contact</a></li>
                     </ul>
                 </div>
                 <div class="burger__overlay"></div>
@@ -50,9 +50,7 @@
                 <div class="header__text">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque illo modi totam voluptatem inventore cumque nobis. Aliquid id hic, adipisci porro consequuntur quibusdam aperiam provident architecto ut quidem eos mollitia? Delectus sapiente repudiandae inventore illum distinctio pariatur iure aperiam!
                 </div>
-                <div class="header__btn btn">
-                    <a href="#second">learn more</a>
-                </div>    
+                <div class="header__btn btn">learn more</div>    
             </div>
 
             <div class="header__dot-panel">
@@ -64,7 +62,7 @@
         </div>
     </header>
 
-    <section class="story offset" id="second">
+    <section class="story offset" id="about">
         <div class="container">
             <div class="story__image">
                 <img src="/images/story.png" alt="storyimage">
@@ -89,7 +87,7 @@
         </div>
     </section>
 
-    <section class="skills offset">
+    <section class="skills offset" id="expertise">
         <div class="container">
             <div class="info-header">
                 <div class="info-header__title">Expertise</div>
@@ -144,7 +142,7 @@
         </div>
     </section>
 
-    <section class="team offset">
+    <section class="team offset" id="teams">
         <div class="container container_dark">
             <div class="info-header">
                 <div class="info-header__title info-header__title_light">meet our amazing team</div>
@@ -188,26 +186,198 @@
         </div>
     </section>
 
-    <section class="works offset">
+    <section class="works offset" id="works">
         <div class="container">
             <div class="info-header__title">our works</div>
-            <div class="works__more">See All Project in dribbble &#5171;</div>
+            <div class="works__more">See All Project in dribbble</div>
         </div>
         <div class="works__item-panel">
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
-            <div class="works__item"></div>
+            <!-- append all  blocks with js (works generator)-->
         </div>
         <button class="btn">load more</button>
+    </section>
+
+    <section class="comments offset" id="peopleSay">
+        <div class="container">
+            <div class="comments__slider">
+                <div class="comments__slider-wrapper">
+                    <img src="/images/feedback/quote.png" alt="quote">
+                    <div class="comments__slider-inner">
+                        <div class="comments__slider-item">
+                            This is Photoshop's version of Lorem Ipsum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sequi quam expedita natus debitis illo aliquam, totam distinctio corrupti quod! Temporibus sunt tenetur dolorem?
+                            <div class="comments__slider-name">
+                                Jane Galadriel
+                            </div>
+                            <div class="comments__slider-majority">
+                                ceo tengkurep
+                            </div>
+                        </div>
+                        <div class="comments__slider-item">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eligendi impedit maiores quam cum accusantium et corrupti voluptates quae magni eius vel similique veniam atque autem deleniti, nisi provident possimus.
+                            <div class="comments__slider-name">
+                                semf ucuk
+                            </div>
+                            <div class="comments__slider-majority">
+                                ceo & founder
+                            </div>
+                        </div>
+                        <div class="comments__slider-item">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam et deleniti facere veritatis suscipit modi, deserunt exercitationem dignissimos? Quam qui fuga perspiciatis aliquam fugiat reiciendis!
+                            <div class="comments__slider-name">
+                                dik adalin
+                            </div>
+                            <div class="comments__slider-majority">
+                                engineering
+                            </div>
+                        </div>
+                        <div class="comments__slider-item">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, optio mollitia cumque asperiores accusamus doloremque consequatur, a dicta itaque porro et.
+                            <div class="comments__slider-name">
+                                jeng kol
+                            </div>
+                            <div class="comments__slider-majority">
+                                designer
+                            </div>
+                        </div>
+                        <div class="comments__slider-item">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, sequi.Error, optio mollitia cumque asperiores accusamus doloremque consequatur.
+                            <div class="comments__slider-name">
+                                pet romak
+                            </div>
+                            <div class="comments__slider-majority">
+                                marketing
+                            </div>  
+                        </div>
+                    </div>
+
+                    <div class="comments__responder-panel">
+                        <div class="comments__prev"></div>
+                        <div data-slide-to="1" class="comments__responder comments__responder_active">
+                            <img src="/images/feedback/1.png" alt="responder">
+                        </div>
+                        <div data-slide-to="2" class="comments__responder">
+                            <img src="/images/feedback/2.png" alt="responder">
+                        </div>
+                        <div data-slide-to="3" class="comments__responder">
+                            <img src="/images/feedback/3.png" alt="responder">
+                        </div>
+                        <div data-slide-to="4" class="comments__responder">
+                            <img src="/images/feedback/4.png" alt="responder">
+                        </div>
+                        <div data-slide-to="5" class="comments__responder">
+                            <img src="/images/feedback/5.png" alt="responder">
+                        </div>
+                        <div class="comments__next"></div>
+                    </div>
+                </div>         
+            </div>
+        </div>
+    </section>
+
+    <section class="contact offset" id="contact">
+        <div class="container">
+            <div class="contact__form">
+                <div class="info-header__title">give us a good news</div>
+                <form action="post">
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="textarea" name="message" id="textarea" cols="67" rows="10" placeholder="Your Message"></textarea>
+                </form>
+                <button type="submit" class="btn">submit</button>
+            </div>
+            <div class="contact__clients">
+                <div class="info-header__title">our happy client</div>
+                <div class="contact__client-panel">
+                    <div class="contact__client">
+                        <img src="/images/form/1.png" alt="clientlogo">
+                    </div>
+                    <div class="contact__client">
+                        <img src="/images/form/2.png" alt="clientlogo">
+                    </div>
+                    <div class="contact__client">
+                        <img src="/images/form/3.png" alt="clientlogo">
+                    </div>
+                    <div class="contact__client">
+                        <img src="/images/form/4.png" alt="clientlogo">
+                    </div>
+                    <div class="contact__client">
+                        <img src="/images/form/5.png" alt="clientlogo">
+                    </div>
+                    <div class="contact__client">
+                        <img src="/images/form/6.png" alt="clientlogo">
+                    </div>
+                    <div class="contact__client">
+                        <img src="/images/form/7.png" alt="clientlogo">
+                    </div>
+                    <div class="contact__client">
+                        <img src="/images/form/8.png" alt="clientlogo">
+                    </div>
+                    <div class="contact__client">
+                        <img src="/images/form/9.png" alt="clientlogo">
+                    </div>
+                    <div class="contact__client">
+                        <img src="/images/form/10.png" alt="clientlogo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer offset">
+        <div class="container container_dark container_flex">
+            <div class="footer__main">
+                <div class="footer-info">
+                    <div class="footer-info__logo">
+                        <img src="/images/logo.png" alt="logo">
+                        <span class="footer-info__logotype">tajam</span>
+                    </div>
+                    <p class="footer-info__text">lorem quis bibendum auctor, nisi elit consequat ipsom, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit</p>
+                </div>
+                <div class="footer-studio">
+                    <div class="footer-studio__title">our studio</div>
+                    <img class="footer-studio__icon" src="/images/footer/1.png" alt="point">
+                    <p class="footer-studio__text">Ruko cucruk, JI.Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia</p>
+                    <img class="footer-studio__icon" src="/images/footer/2.png" alt="phone">
+                    <a class="footer-studio__phone" href="tel:+6494461709">(+62) 21-2224 3333</a>
+                </div>
+                <div class="footer-touch">
+                    <div class="footer-touch__title">stay in touch</div>
+                    <input class="footer-touch__input" type="email" placeholder="Subscribe our newsletter">
+                    <button class="footer-touch__btn" type="submit">
+                        <img src="/images/footer/paper.png" alt="paper">
+                    </button>
+                    <div class="footer-touch__social-panel">
+                        <div class="footer-touch__social">
+                            <img src="/images/footer/3.png" alt="socialicon">
+                        </div>
+                        <div class="footer-touch__social">
+                            <img src="/images/footer/4.png" alt="socialicon">
+                        </div>
+                        <div class="footer-touch__social">
+                            <img src="/images/footer/5.png" alt="socialicon">
+                        </div>
+                        <div class="footer-touch__social">
+                            <img src="/images/footer/6.png" alt="socialicon">
+                        </div>
+                        <div class="footer-touch__social">
+                            <img src="/images/footer/7.png" alt="socialicon">
+                        </div>
+                        <div class="footer-touch__social">
+                            <img src="/images/footer/8.png" alt="socialicon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <div>
+                    <a href="#">help</a>
+                    <a href="#">terms & condition</a>
+                    <a href="#">privacy</a>
+                </div>
+                <div>Copyright &copy; 2015 - Tajem Creative</div>
+            </div>
+        </div>
     </section>
 
     <script src="js/main.js"></script>
