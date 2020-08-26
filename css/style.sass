@@ -23,7 +23,6 @@ body
     &_dark
         color: #fff
 
-
 .offset
     padding: 70px 0
 
@@ -54,16 +53,15 @@ body
         border: 1px solid black
         transition: all .3s ease-in-out
         box-shadow: 0px 0px 15px 5px #797979
-        animation:  glowing infinite linear 2s alternate
-
+        animation: glowing infinite linear 2s alternate
 
 @keyframes glowing 
-  0% 
-    box-shadow: 0px 0px 20px 5px #797979
-  50% 
-    box-shadow: 0px 0px 50px 5px #797979  
-  100%
-    box-shadow: 0px 0px 80px 5px #797979
+    0%
+        box-shadow: 0px 0px 20px 5px #797979
+    50%
+        box-shadow: 0px 0px 50px 5px #797979
+    100%
+        box-shadow: 0px 0px 80px 5px #797979
 
 .info-header
     margin: 0 auto
@@ -83,6 +81,7 @@ body
         color: #636268
         position: relative
         font-family: 'Playfair Display'
+        line-height: 22px
         @include pseudo(2px, -25px, #c6c4c9)
         &_light
             color: #fff
@@ -91,7 +90,7 @@ body
 // Header =========================================>
 
 .header
-    background: url("/images/bgr/intro.jpg") 0 0 / cover no-repeat
+    background: url("../images/bgr/intro.jpg") 0 0 / cover no-repeat
     &__nav
         margin-top: 40px
         width: 100%
@@ -267,10 +266,10 @@ body
         transform: scale(1, 1)
 
 // Video =========================================>
-
+    
 .video
     height: 550px
-    background: url("/images/bgr/video.jpg") 0 0 / cover no-repeat
+    background: url("../images/bgr/video.jpg") 0 0 / cover no-repeat
     max-width: 100%
     display: flex
     justify-content: center
@@ -322,7 +321,7 @@ body
 // Team =========================================>
 
 .team
-    background: url("/images/bgr/team.jpg") 0 0 / cover no-repeat
+    background: url("../images/bgr/team.jpg") 0 0 / cover no-repeat
     .info-header
         &__text
             @include pseudo(2px, -25px, #655c80)
@@ -330,6 +329,7 @@ body
         display: flex
         flex-direction: row
         justify-content: space-between
+        flex-wrap: wrap
     &__item
         flex: 0 0 23.5%
         text-transform: uppercase
@@ -387,10 +387,17 @@ body
 // Comments =========================================>
 
 .comments
-    background: url("/images/bgr/feedback.jpg") 0 0 / cover no-repeat
-    height: 500px
+    background: url("../images/bgr/feedback.jpg") 0 0 / cover no-repeat
     &__slider
         position: relative
+    &__slider-inner
+        margin: 44px 0
+    &__slider-item
+        font-size: 16px
+        font-family: 'Playfair Display'
+        line-height: 26px
+        color: #ffffff
+        font-weight: 400
     &__slider-name
         margin-top: 55px
         color: #ffffff
@@ -401,23 +408,16 @@ body
         color: #c0bcc9
         text-transform: uppercase
         font-size: 13px
-    &__slider-wrapper
-    &__slider-inner
-        margin: 40px 0 50px 0
-    &__slider-item
-        font-size: 16px
-        font-family: 'Playfair Display'
-        line-height: 26px
-        color: #ffffff
-        font-weight: 400
     &__responder-panel
-        padding-bottom: 15px
+        padding: 15px
         margin: 0 auto
         max-width: 400px
         display: flex
         flex-direction: row
-        justify-content: space-around
+        justify-content: space-between
         align-items: center
+    &__responder
+        cursor: pointer
     &__responder_active
         filter: drop-shadow(0px 0px 10px #fff);
     &__responder-info
@@ -486,7 +486,7 @@ body
 // Footer =========================================>
         
 .footer
-    background: url("/images/bgr/footer.jpg") 0 0 / cover no-repeat
+    background: url("../images/bgr/footer.jpg") 0 0 / cover no-repeat
     &__main
         display: flex
         flex-direction: row
@@ -509,21 +509,20 @@ body
     &-studio
         flex: 0 0 25%
         position: relative
+        text-align: start
         &__title
             font-size: 15px
             text-transform: uppercase
             font-weight: 900
             margin-bottom: 30px
-            position: relative
-            left: -30px
         &__text
             margin-bottom: 20px
             line-height: 26px
         &__phone
             color: #fff
-        &__icon
-            position: absolute
-            left: -30px
+        &__label, &__call
+            position: relative
+            left: 0%
     &-touch
         flex: 0 0 30%
         &__title
@@ -545,7 +544,7 @@ body
                 color: #a09ea5
         &__btn
             width: 70px
-            height: 45px
+            height: 46px
             background-color: #948da7
             opacity: .9   
             position: relative

@@ -10,8 +10,37 @@
     @media screen and (max-width: 450px) 
         max-width: 350px
 
-// Header =========================================>     
-
+// All the rest =========================================>     
+@media screen and (max-width: 992px) 
+    .works__item
+        height: 150px
+    .contact
+        .container
+            display: flex
+            flex-direction: column
+            align-items: center
+        &__form
+            flex: 100%
+            align-items: center
+        input
+            width: 100%
+        textarea
+            width: 100%
+        &__client-panel  
+            justify-content: center
+        &__clients
+            margin-top: 50px
+            flex: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding-left: 0px
+        &__client
+            flex: 0 0 33.333%
+    .footer
+        &-touch
+            &__btn
+                width: 50px
 @media screen and (max-width: 768px)
     .header__link:nth-child(2n)
         display: none
@@ -25,15 +54,79 @@
             text-align: center
         &__info
             padding: 20px 0 0 0 
+    .skills__item
+        flex: 1 1 50%
+        padding: 40px 35px
+        &:nth-child(n)
+            border: none
+        &:nth-child(odd)
+            border-right: 1px solid #ebebeb
+        &:nth-child(-n+4)
+            border-bottom: 1px solid #ebebeb 
+    .team__image
+        height: 150px
+    .works__item
+        flex: 0 0 33.333%
+    .footer
+        &__main
+            flex-direction: column
+            align-items: center
+            text-align: center
+        &-studio 
+            &__title
+                text-align: center
+                left: 0px
+                margin-top: 40px
+        &-touch
+            width: 100%
+            &__title
+                margin-top: 40px
+            &__social-panel
+                margin: 15px auto
+                max-width: 300px
+        &__copyright
+            display: flex
+            flex-direction: column
+            align-items: center
+            div
+                &:first-child
+                    margin-bottom: 15px
+            a
+                display: block
+                margin: 0 30px 5px 30px
 @media screen and (max-width: 576px) 
     .header__menu
         display: none
     .header__nav
         margin-bottom: 65px 
     .burger
-        display: block
-        
-
-        
-        
+        display: block  
+    .team__item
+        flex: 0 0 47%
+        margin-bottom: 23px
+    .works__item
+        height: 150px
+        flex: 0 0 50%
+    .contact__client
+        flex: 0 0 50%
+@media screen and (max-width: 450px)
+    .skills__item
+        flex: 1 1 100%
+        &:nth-child(n)
+            border: none
+        &:nth-child(-n+5)
+            border-bottom: 1px solid #ebebee
+    .team__item
+        flex: 0 0 100%
+    .works__item
+        height: 230px
+        flex: 0 0 100%
+    .comments__responder
+        img
+            transform: scale(.8)
+    .comments__next, .comments__prev
+        display: none
+    .works__more
+        &::after        
+            right: 0px
        
